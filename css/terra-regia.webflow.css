@@ -3145,6 +3145,7 @@ h1{
 }
 
 .prueba{
-  color:red
+  color:red;
+  height: 10px;
 }
 
