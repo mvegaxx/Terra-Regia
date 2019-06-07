@@ -34,7 +34,7 @@
   <div class="hero-proyectos"><img src="images/Fondo-azul.svg" alt="" class="fondo-azul-proyectos">
     <h1 class="titulo-hero-proyectos relative">Nuestros Proyectos</h1>
     <p class="parrafo-hero-proyectos">Desarrollamos proyectos integrales de diversas categorías: habitacionales, industriales y comerciales; ubicados en la ciudad de Monterrey y área metropolitana.</p>
-    <div class="links-hero-proyectos"><a href="#" class="link-menu-hero-proyectos blanco">Todos</a><a href="#" class="link-menu-hero-proyectos verde">comercial</a><a href="#" class="link-menu-hero-proyectos azul">industrial</a><a href="#" class="link-menu-hero-proyectos blanco">integral</a><a href="#" class="link-menu-hero-proyectos verde">residencial</a></div><img src="images/proyecto-casas-1.svg" alt="" class="ilustracion-1-hero-proyectos"><img src="images/proyecto-casas-2.svg" alt="" class="ilustracion-2-hero-proyectos"></div>
+    <div class="links-hero-proyectos"><a href="#" class="link-menu-hero-proyectos blanco">Todos</a><a href="#" class="link-menu-hero-proyectos verde">comercial</a><a href="#" class="link-menu-hero-proyectos azul">industrial</a><a href="#" class="link-menu-hero-proyectos blanco">integral</a><a href="#" class="link-menu-hero-proyectos verde">residencial</a></div><img src="images/proyecto-casas-1.svg" alt="" class="ilustracion-1-hero-proyectos ilustracion"><img src="images/proyecto-casas-2.svg" alt="" class="ilustracion-2-hero-proyectos ilustracion"></div>
   <div class="galeria-proyectos w-clearfix"><a href="proyecto.html" class="card-galeria-proyectos w-inline-block"><img src="images/proyecto-1.jpg" alt="" class="imagen-chica-galeria">
     <h3 class="titulo-foto-galeria-proyectos">Lorem Ipsum</h3></a><a href="proyecto.html" class="card-galeria-proyectos w-inline-block"><img src="images/proyecto-2.jpg" alt="" class="imagen-chica-galeria"><h3 class="titulo-foto-galeria-proyectos">Peraspera Adastra</h3></a><a href="proyecto.html" class="card-galeria-proyectos ultimo w-inline-block"><img src="images/proyecto-3.jpg" alt="" class="imagen-mediana-galeria"><h3 class="titulo-foto-galeria-proyectos">Sedima Amater</h3></a><a href="proyecto.html" class="card-galeria-proyectos w-inline-block"><img src="images/proyecto-4.jpg" alt="" class="imagen-grande-galeria"><h3 class="titulo-foto-galeria-proyectos">Peraspera Adastra</h3></a><a href="proyecto.html" class="card-galeria-proyectos ultimo w-inline-block"><img src="images/proyecto-5.jpg" alt="" class="imagen-mediana-galeria"><h3 class="titulo-foto-galeria-proyectos">Peraspera Adastra</h3></a><a href="proyecto.html" class="card-galeria-proyectos w-inline-block"><img src="images/proyecto-6.jpg" alt="" class="imagen-chica-galeria"><h3 class="titulo-foto-galeria-proyectos">Sedima Amater</h3></a><a href="proyecto.html" class="card-galeria-proyectos ultimo w-inline-block"><img src="images/proyecto-7.jpg" alt="" class="imagen-chica-galeria"><h3 class="titulo-foto-galeria-proyectos">Lorem Ipsum</h3></a><a href="proyecto.html" class="card-galeria-proyectos w-inline-block"><img src="images/proyecto-8.jpg" alt="" class="imagen-mediana-galeria"><h3 class="titulo-foto-galeria-proyectos">Sedima Amater</h3></a><a href="proyecto.html" class="card-galeria-proyectos ultimo w-inline-block"><img src="images/proyecto-9.jpg" alt="" class="imagen-mediana-galeria"><h3 class="titulo-foto-galeria-proyectos">Lorem Ipsum</h3></a><a href="proyecto.html" class="card-galeria-proyectos w-inline-block"><img src="images/proyecto-10.jpg" alt="" class="imagen-chica-galeria"><h3 class="titulo-foto-galeria-proyectos">Peraspera Adastra</h3></a><a href="proyecto.html" class="card-galeria-proyectos w-inline-block"><img src="images/proyecto-13.jpg" alt="" class="imagen-chica-galeria"><h3 class="titulo-foto-galeria-proyectos">Sedima Amater</h3></a><a href="proyecto.html" class="card-galeria-proyectos ultimo w-inline-block"><img src="images/proyecto-11.jpg" alt="" class="imagen-mediana-galeria"><h3 class="titulo-foto-galeria-proyectos">Lorem Ipsum</h3></a></div><img src="images/fondo-3.svg" alt="" class="fondo-1-proyectos"><img src="images/fondo-3.svg" alt="" class="fondo-2-proyectos"><img src="images/fondo-2.svg" alt="" class="fondo-3-proyectos">
   <div class="footer w-clearfix"><a href="index.html" class="link-block w-inline-block w-clearfix"><img src="images/Logo-terra-regia.png" alt="" class="logo-footer"></a>
@@ -92,7 +92,7 @@
 
       })
 
-      $('.absolute').each(function () {
+      $('.relative').each(function () {
 
         var ourscene = new ScrollMagic.Scene({
           triggerElement: this,
@@ -138,8 +138,34 @@
       })
 
 
+      $('.ilustracion').each(function () {
+
+
+        var ourscene5 = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .7
+        })
+          .setClassToggle(this, 'aparece')
+          .addIndicators({
+            name: 'edificio',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+
+      })
+
+
+
 
     })
+
+
+
+
+
+
+
   </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>

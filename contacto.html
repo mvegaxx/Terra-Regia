@@ -47,7 +47,7 @@
       <div class="w-form-fail">
         <div>Oops! Something went wrong while submitting the form.</div>
       </div>
-    </div><img src="images/casas-contacto-1.svg" alt="" class="casas-1-contacto"><img src="images/casas-contacto-2.svg" alt="" class="casas-2-contacto"><img src="images/fondo-1.svg" alt="" class="fondo-1-contacto"></div>
+    </div><img src="images/casas-contacto-1.svg" alt="" class="casas-1-contacto ilustracion"><img src="images/casas-contacto-2.svg" alt="" class="casas-2-contacto ilustracion"><img src="images/fondo-1.svg" alt="" class="fondo-1-contacto"></div>
   <div class="footer w-clearfix"><a href="index.html" class="link-block w-inline-block w-clearfix"><img src="images/Logo-terra-regia.png" alt="" class="logo-footer"></a>
     <div class="columna-1-footer">
       <h3 class="titulo-nosotros-footer">Sobre nosotros</h3>
@@ -148,6 +148,24 @@
             colorStar: 'blue'
           })
           .addTo(controller)
+      })
+
+
+      $('.ilustracion').each(function () {
+
+
+        var ourscene5 = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .7
+        })
+          .setClassToggle(this, 'aparece')
+          .addIndicators({
+            name: 'edificio',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+
       })
 
 
@@ -364,7 +382,7 @@
           
           google.maps.event.addListener(marker, 'click', function () {
             
-            window.open('https://goo.gl/maps/aKN2uDhA9ejH6fmR6', '_blank');
+            window.open('https://goo.gl/maps/G9h96Nvvm7tL2VXh9', '_blank');
           });
           
         };
