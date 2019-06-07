@@ -32,28 +32,28 @@
     </div>
   </div>
   <div class="hero-servicios">
-    <h1 class="titulo-hero-servicios">Nuestros servicios</h1>
+    <h1 class="titulo-hero-servicios relative">Nuestros servicios</h1>
     <p class="paragraph-5">Manejamos una amplia variedad de productos como: Macrolotes, lotes industriales, comerciales y residenciales, también casas de interés social y residencial.</p><img src="images/fondo-2.svg" alt="" class="fondo-1-servicios"><img src="images/fondo-1.svg" alt="" class="fondo-2-servicios"></div>
   <div class="seccion-servicios w-clearfix">
     <div class="ilustracion-1-servicios"><img src="images/persona-1.svg" alt="" class="persona-1-servicios"></div>
     <div class="servicio-1-servicios">
-      <h1 class="titulo-servicios">Consultoría Patrimonial</h1>
+      <h1 class="titulo-servicios relative">Consultoría Patrimonial</h1>
       <p class="parrafo-servicios">Realizamos estudios de ubicación, factibilidad técnica, legal y financiera para realizar tu proyecto inmobiliario.</p><img src="images/servicios-casas-1.svg" alt="" class="casa-1-servicios"></div>
     <div class="servicio-2-servicios">
-      <h1 class="titulo-servicios">Proyectos</h1>
+      <h1 class="titulo-servicios relative">Proyectos</h1>
       <p class="parrafo-servicios">Optimizamos la inversión en infraestructura y servicios en lotes para todos los mercados.</p>
     </div>
     <div class="ilustracion-2-servicios"><img src="images/persona-2.svg" alt="" class="persona-2-servicios"></div>
     <div class="ilustracion-3-servicios"><img src="images/persona-3.svg" alt="" class="persona-3-persona"></div>
     <div class="servicio-3-servicios">
-      <h1 class="titulo-servicios ultimo">Urbanización y contruccion</h1>
+      <h1 class="titulo-servicios ultimo relative">Urbanización y contruccion</h1>
       <p class="parrafo-servicios ultimo">Edificamos los mejores espacios, ejecutando proyectos constructivos eficientes y en tiempo.</p><img src="images/servicios-casas-2.svg" alt="" class="image-13"></div><img src="images/fondo-1.svg" alt="" class="fondo-3-servicios"><img src="images/fondo-3.svg" alt="" class="fondo-4-servicios"><img src="images/fondo-3.svg" alt="" class="fondo-5-servicios"><img src="images/fondo-2.svg" alt="" class="fondo-6-servicios"><img src="images/fondo-1.svg" alt="" class="fondo-7-servicios"></div>
   <div class="contruimos-servicios">
-    <h1 class="titulo-contruimos">Construimos Ciudad</h1>
+    <h1 class="titulo-contruimos relative">Construimos Ciudad</h1>
     <div class="div-block"><img src="images/ciudad.svg" alt="" class="ilustracion-compartimos-servicios"></div>
   </div>
   <div class="proceso-servicios">
-    <h1 class="titulo-proceso-servicios">Conoce nuestro proceso...</h1><img src="images/servicios-casas-3.svg" alt="" class="ilustracion-1-proceso-servicios">
+    <h1 class="titulo-proceso-servicios relative">Conoce nuestro proceso...</h1><img src="images/servicios-casas-3.svg" alt="" class="ilustracion-1-proceso-servicios">
     <div class="pasos-proceso-servicios">
       <div class="paso-proceso-servicios w-clearfix">
         <h2 class="numero-proceso-servicios">1</h2>
@@ -106,7 +106,7 @@
     </div><img src="images/servicios-casas-4.svg" alt="" class="edificils-2-proceso"><img src="images/fondo-3.svg" alt="" class="fondo-8-servicios"><img src="images/fondo-3.svg" alt="" class="fondo-9-servicios"><img src="images/fondo-2.svg" alt="" class="fondo-10-servicios"><img src="images/fondo-2.svg" alt="" class="fondo-11-servicios"></div>
   <div class="contacto-servicios w-clearfix"><img src="images/Fondo-azul.svg" alt="" class="fondo-contacto-servicios">
     <div class="texto-contacto-servicios">
-      <h2 class="titulo-contacto-servicios">¿Necesitas asesoría con tu terreno?</h2>
+      <h2 class="titulo-contacto-servicios relative">¿Necesitas asesoría con tu terreno?</h2>
       <p class="paragraph-7">Mándanos un mensaje por este medio y nos pondremos en contacto contigo lo más rápido posible.</p>
     </div>
     <div class="form-block w-form">
@@ -135,8 +135,95 @@
       <h6 class="heading-4">Regresar<br>arriba</h6>
     </div>
   </div>
-  <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  
   <script src="js/webflow.js" type="text/javascript"></script>
+  
+  
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      var controller = new ScrollMagic.Controller();
+
+      $('.relative').each(function () {
+
+        var ourscene = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .9
+        })
+          .setClassToggle(this, 'titulo-aparece')
+          .addIndicators({
+            name: 'fadein',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+
+
+
+      })
+
+      $('.absolute').each(function () {
+
+        var ourscene = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .9
+        })
+          .setClassToggle(this, 'titulo-aparece')
+          .addIndicators({
+            name: 'fadein',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+      })
+
+      $('.imagen-derecha').each(function () {
+
+        var ourscene = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .9
+        })
+          .setClassToggle(this, 'aparece-der')
+          .addIndicators({
+            name: 'fadein',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+      })
+
+      $('.imagen-izquierda').each(function () {
+
+        var ourscene = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .9
+        })
+          .setClassToggle(this, 'aparece-izq')
+          .addIndicators({
+            name: 'fadein',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+      })
+
+
+
+    })
+  </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

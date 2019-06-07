@@ -31,28 +31,30 @@
     </div>
   </div>
   <div class="hero-home w-clearfix">
-    <div class="edificio-1-hero-home"><img src="images/index-casa-1.svg" alt="" class="imagen-1-hero-home"></div>
+
+    <div class="edificio-1-hero-home imagen-izquierda"><img src="images/index-casa-1.svg" alt="" class="imagen-1-hero-home"></div>
+    
     <div class="info-hero-home">
-      <h1 class="titulo-hero-home">En Terra Regia creamos valor</h1>
+      <h1 class="titulo-hero-home relative">En Terra Regia creamos valor</h1>
       <p class="parrafo-hero-home">Somos una desarrolladora inmobiliaria con más de 15 años, fortalecida con la experiencia acumulada de sus socios fundadores y de un sólido equipo de trabajo.</p><img src="images/play.svg" alt="" class="play-home"></div>
-    <div class="edificio-2-hero-home"><img src="images/index-casa-2.svg" alt="" class="imagen-2-hero-home"></div><img src="images/fondo-2.svg" alt="" class="fondo-1"></div>
+    <div class="edificio-2-hero-home imagen-derecha"><img src="images/index-casa-2.svg" alt="" class="imagen-2-hero-home"></div><img src="images/fondo-2.svg" alt="" class="fondo-1"></div>
   <div class="expectativas-home">
-    <h1 class="titulo-expectativas-home">Excedemos expectativas</h1>
+    <h1 class="titulo-expectativas-home absolute">Excedemos expectativas</h1>
   </div>
   <div class="adn-home w-clearfix">
     <div class="fondo-adn-home"><img src="images/Fondo-azul.svg" alt="" class="image-5"></div>
     <div class="arbol-adn"><img src="images/index-casa-3.svg" alt="" class="imagen-3-adn-home"></div>
     <div class="info-adn-home">
-      <h2 class="titulo-adn-home">¿Cuál es <span class="titulo-negritas-adn-home">nuestro ADN?</span></h2>
+      <h2 class="titulo-adn-home relative">¿Cuál es <span class="titulo-negritas-adn-home">nuestro ADN?</span></h2>
       <h3 class="titulo-mision-adn-home">Misión</h3>
       <p class="parrafo-mision">Crear valor con soluciones que consoliden las ideas, los sueños y patrimonio de nuestros clientes y colaboradores.</p>
       <h3 class="titulo-vision-adn-home">Visión</h3>
       <p class="paragraph">Ser la empresa más admirada, respetada y reconocida por sus soluciones creativas y éxito sostenido.</p>
     </div>
     <div class="imagen-adn-home"><img src="images/index-1.jpg" alt="" class="image-1-adn-home"></div>
-    <div class="edificio-adn-home"><img src="images/index-casa-4.svg" alt="" class="image-2-adn-home"></div><img src="images/fondo-3.svg" alt="" class="fondo-2"></div>
+    <div class="edificio-adn-home imagen-izquierda aparece-izq"><img src="images/index-casa-4.svg" alt="" class="image-2-adn-home"></div><img src="images/fondo-3.svg" alt="" class="fondo-2"></div>
   <div class="principios-home">
-    <h2 class="titulo-principios-home">Principios <span class="span-principios-home">que vivimos</span></h2>
+    <h2 class="titulo-principios-home relative">Principios <span class="span-principios-home">que vivimos</span></h2>
     <div class="seccion-principios-home">
       <div class="derecha-principios-home"><img src="images/fondo-iconos-1.3.svg" alt="" class="figura-izquierda-principios">
         <div class="principios-container">
@@ -128,7 +130,97 @@
     </div>
   </div>
   <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
   <script src="js/webflow.js" type="text/javascript"></script>
+
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){  
+
+    var controller = new ScrollMagic.Controller();
+
+  $('.relative').each(function(){
+
+     var ourscene = new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: .9
+    })
+      .setClassToggle(this, 'titulo-aparece')
+      .addIndicators({
+        name: 'fadein',
+        colorTrigger: 'black',
+        colorStar: 'blue'
+      })
+      .addTo(controller)
+
+
+
+  })
+
+  $('.absolute').each(function () {
+
+      var ourscene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: .9
+      })
+        .setClassToggle(this, 'titulo-aparece')
+        .addIndicators({
+          name: 'fadein',
+          colorTrigger: 'black',
+          colorStar: 'blue'
+        })
+        .addTo(controller)
+    })
+
+    $('.imagen-derecha').each(function () {
+
+      var ourscene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: .7
+      })
+        .setClassToggle(this, 'aparece-der')
+        .addIndicators({
+          name: 'fadein',
+          colorTrigger: 'black',
+          colorStar: 'blue'
+        })
+        .addTo(controller)
+    })
+
+     $('.imagen-izquierda').each(function () {
+
+      var ourscene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: .7
+      })
+        .setClassToggle(this, 'aparece-izq')
+        .addIndicators({
+          name: 'fadein',
+          colorTrigger: 'black',
+          colorStar: 'blue'
+        })
+        .addTo(controller)
+    })
+
+
+  
+  })
+  </script>
+
+
+
+
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

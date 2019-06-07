@@ -142,12 +142,19 @@ a {
 .edificio-1-hero-home {
   width: 33.33%;
   float: left;
+  position: relative;
+  right: 100%;
+  
 }
 
+
+
 .edificio-2-hero-home {
+  position: relative;
   width: 33.33%;
   margin-top: 9vw;
   float: left;
+  left:100%;
 }
 
 .info-hero-home {
@@ -1029,6 +1036,9 @@ a {
   transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .texto-contacto-servicios {
@@ -2899,3 +2909,60 @@ a {
   font-weight: 900;
   font-style: normal;
 }
+
+
+/*clases para las animaciones*/
+
+h1{ 
+  position: relative;
+  opacity: 0;
+  top:30px;
+  transition: 1s;
+}
+.titulo-foto-galeria-proyectos{
+  position: relative;
+  opacity: 0;
+  top:30px;
+  transition: 1s;
+
+}
+
+.relative{
+  position: relative;
+  opacity: 0;
+  top:30px;
+  transition: 1s;
+}
+
+.absolute{
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+
+
+.titulo-aparece{
+  opacity: 1; 
+  top:0px;
+  transition: 1s;
+}
+
+.margen{
+  margin-right: -30px;
+  opacity: 0;
+}
+
+
+
+.aparece-izq{
+  opacity: 1;
+  right: 0;
+  transition: 1s;
+}
+
+.aparece-der{
+  opacity: 1;
+  left: 0;
+  transition: 1s;
+}
+

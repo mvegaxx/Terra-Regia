@@ -32,12 +32,12 @@
     </div>
   </div>
   <div class="hero-contacto">
-    <h1 class="heading-5">Contacto</h1>
+    <h1 class="heading-5 relative">Contacto</h1>
     <div id="mapa-contacto" class="mapa-contacto"><img src="images/mapa-contacto.jpg" srcset="images/mapa-contacto-p-1080.jpeg 1080w, images/mapa-contacto.jpg 1300w" sizes="100vw" alt="" class="image-17"></div>
   </div>
   <div class="formulario-contacto w-clearfix"><img src="images/fondo-azul-contacto.svg" alt="" class="fondo-conazul-contacto">
     <div class="texto-contacto w-clearfix">
-      <h1 class="titulo-forma-contacto">¿Quieres ser parte de la Familia TR?</h1>
+      <h1 class="titulo-forma-contacto relative">¿Quieres ser parte de la Familia TR?</h1>
       <p class="paragraph-9">Envíanos tu información, cuál es tu área de interés. ¡No olvides cargar tu CV y portafolio!</p><a href="#" class="button w-button">Cargar CV</a></div>
     <div class="form-block contacto w-form">
       <form id="email-form" name="email-form" data-name="Email Form" class="form"><input type="text" class="campo-servicios w-input" maxlength="256" name="Nombre" data-name="Nombre" placeholder="Nombre" id="Nombre" required=""><input type="email" class="campo-servicios w-input" maxlength="256" name="Correo" data-name="Correo" placeholder="Correo" id="Correo" required=""><textarea placeholder="Escribe tu mensaje" maxlength="5000" id="mensaje" name="mensaje" data-name="Mensaje" required="" class="textarea w-input"></textarea><input type="submit" value="Enviar" data-wait="Please wait..." class="submit-button w-button"></form>
@@ -63,8 +63,95 @@
       <h6 class="heading-4">Regresar<br>arriba</h6>
     </div>
   </div>
-  <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  
   <script src="js/webflow.js" type="text/javascript"></script>
+  
+  
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      var controller = new ScrollMagic.Controller();
+
+      $('.relative').each(function () {
+
+        var ourscene = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .9
+        })
+          .setClassToggle(this, 'titulo-aparece')
+          .addIndicators({
+            name: 'fadein',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+
+
+
+      })
+
+      $('.absolute').each(function () {
+
+        var ourscene = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .9
+        })
+          .setClassToggle(this, 'titulo-aparece')
+          .addIndicators({
+            name: 'fadein',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+      })
+
+      $('.imagen-derecha').each(function () {
+
+        var ourscene = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .9
+        })
+          .setClassToggle(this, 'aparece-der')
+          .addIndicators({
+            name: 'fadein',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+      })
+
+      $('.imagen-izquierda').each(function () {
+
+        var ourscene = new ScrollMagic.Scene({
+          triggerElement: this,
+          triggerHook: .9
+        })
+          .setClassToggle(this, 'aparece-izq')
+          .addIndicators({
+            name: 'fadein',
+            colorTrigger: 'black',
+            colorStar: 'blue'
+          })
+          .addTo(controller)
+      })
+
+
+
+    })
+  </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
