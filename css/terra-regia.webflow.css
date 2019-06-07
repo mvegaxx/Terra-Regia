@@ -872,6 +872,7 @@ a {
 
 .pasos-proceso-servicios {
   padding-top: 10vw;
+
 }
 
 .numero-proceso-servicios {
@@ -904,6 +905,7 @@ a {
   border-width: 1px;
   border-color: #193761;
   color: #193761;
+
 }
 
 .texto-punto-proceso {
@@ -2947,10 +2949,8 @@ h1{
   transition: 1s;
 }
 
-.margen{
-  margin-right: -30px;
-  opacity: 0;
-}
+
+
 
 
 
@@ -2965,4 +2965,12 @@ h1{
   left: 0;
   transition: 1s;
 }
+
+
+.paso-proceso:hover {
+   transform: scale(1.1);
+   color: #a5bf5c;
+  transition: 1s;
+}
+
 
