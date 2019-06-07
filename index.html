@@ -38,9 +38,10 @@
       <h1 class="titulo-hero-home relative">En Terra Regia creamos valor</h1>
       <p class="parrafo-hero-home">Somos una desarrolladora inmobiliaria con más de 15 años, fortalecida con la experiencia acumulada de sus socios fundadores y de un sólido equipo de trabajo.</p>
       
-      <button class="play-button"><img src="images/play.svg" alt="" class="play-home"></button></div>
+      <button class="play-button" id="play-button"><img src="images/play.svg" alt="" id="play-home" class="play-home"></button></div>
       <div class="video">
-        
+        <div class="cerrar"><h1>X</h1></div>
+
       </div>
     
     
@@ -153,6 +154,17 @@
 
   <script type="text/javascript">
 
+  $('#play-button').click(function(){
+      $(".video").addClass('mostrar-video');
+      $('body').css("overflow", "hidden")
+    });
+
+    $('.cerrar').click(function () {
+        $(".video").removeClass('mostrar-video')
+        $('body').css("overflow-y", "initial")
+      });
+
+
   $(document).ready(function(){  
 
     var controller = new ScrollMagic.Controller();
@@ -223,6 +235,9 @@
 
   
   })
+
+
+  
   </script>
 
 

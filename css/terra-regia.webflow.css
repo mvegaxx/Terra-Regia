@@ -2989,13 +2989,45 @@ h1{
   
 }
 
+
+
 .video{
+  height: .1vh;
+  width: .1vw;
+  right: auto;
+  left: auto;
+  top: 0;
+  transition: 1s;
+  position: fixed;
+  
+
+}
+.cerrar{
+  width: auto;
+  height: auto;
+  position: absolute;
+  z-index: 100000;
+  top:0;
+  right:50px;
+  cursor: pointer;
+}
+
+.cerrar h1{
+  opacity: 1;
+  color: white;
+  font-size: 20px;
+  top:initial;
+}
+
+.mostrar-video{
   position: fixed;
   top:0;
   z-index: 10000;
   width: 100vw;
   height: 100vh;
   background: gray;
+  
+  transition: 1s;
 
 }
 
