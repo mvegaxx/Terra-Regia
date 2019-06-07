@@ -2942,6 +2942,13 @@ h1{
   transition: 1s;
 }
 
+.paso-proceso{
+  position: relative;
+  opacity: 0;
+  transition: 1s;
+  top:30px
+
+}
 
 .titulo-aparece{
   opacity: 1; 
@@ -2967,10 +2974,29 @@ h1{
 }
 
 
+
+
 .paso-proceso:hover {
    transform: scale(1.1);
    color: #a5bf5c;
   transition: 1s;
+}
+
+.play-button{
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  
+}
+
+.video{
+  position: fixed;
+  top:0;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background: gray;
+
 }
 
 
